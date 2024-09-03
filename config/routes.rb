@@ -6,6 +6,22 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "request", controller: "nfl_examples", action: "intermediate_example"
+
+  get "fantasy", controller: "nfl_examples", action: "fantasy_projections"
+  
+  get "get_by_id", controller: "nfl_examples", action: "get_player_by_id"
+  get "get_by_name", controller: "nfl_examples", action: "get_player_by_name"
+
+  get "add", controller: "nfl_examples", action: "add_player"
+
+  get "upload", controller: "nfl_examples", action: "upload_fantasy_projections"
+  get "display", controller: "nfl_examples", action: "display_fantasy_projections"
+
+  get "remove_dups", controller: "nfl_examples", action: "remove_duplicates"
+
+  get "display", controller: "nfl_examples", action: "display_players"
+  
   # Defines the root path route ("/")
   # root "posts#index"
+
 end
